@@ -5,15 +5,11 @@ import Contacts from './Contacts/Contacts';
 import ContactForm from './ContactForm/ContactForm';
 import Filter from './Filter/Filter';
 
-import { useReducer } from 'react';
-
 export const App = () => {
   const [contacts, setContacts] = useState([]);
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
   const [filter, setFilter] = useState('');
-
-  const [ignored, forceUpdate] = useReducer(x => x + 1, 0);
 
   const add = e => {
     e.preventDefault();
